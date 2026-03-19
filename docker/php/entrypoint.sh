@@ -4,7 +4,7 @@ set -e
 cd /var/www/html
 
 # Install composer dependencies if vendor doesn't exist
-if [ ! -d "vendor" ]; then
+if [ ! -f "vendor/autoload.php" ]; then
     echo ">>> Installing Composer dependencies..."
     composer install --no-interaction --optimize-autoloader
 fi

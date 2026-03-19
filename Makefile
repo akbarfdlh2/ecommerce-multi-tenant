@@ -33,18 +33,18 @@ init: ## First-time setup: build, copy .env, install deps, seed
 	@echo ">>> Building containers..."
 	docker-compose up -d --build
 	@echo ">>> Waiting for MongoDB to be ready..."
-	sleep 5
+	timeout /t 5 /nobreak >nul
 	@echo ">>> Copying .env file..."
-	docker-compose exec app cp .env.example .env 2>/dev/null || true
+	-docker-compose exec -T app cp .env.example .env
 	@echo ">>> Generating app key..."
-	docker-compose exec app php artisan key:generate
+	docker-compose exec -T app php artisan key:generate
 	@echo ">>> Running seeders..."
-	docker-compose exec app php artisan db:seed
-	@echo ""
-	@echo "✅ Setup complete!"
-	@echo "   Backend:      http://localhost:8000"
-	@echo "   Frontend:     http://localhost:5173"
-	@echo "   Mongo Express: http://localhost:8081"
+	docker-compose exec -T app php artisan db:seed
+	@echo.
+	@echo Setup complete!
+	@echo    Backend:       http://localhost:8000
+	@echo    Frontend:      http://localhost:5173
+	@echo    Mongo Express: http://localhost:8081
 
 # ── Laravel ────────────────────────────────────────────────────────────────────
 

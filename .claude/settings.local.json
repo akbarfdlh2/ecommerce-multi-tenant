@@ -20,7 +20,9 @@
       "Bash(docker-compose logs:*)",
       "Bash(docker-compose down:*)",
       "Bash(docker volume:*)",
-      "Bash(docker-compose up:*)"
+      "Bash(docker-compose up:*)",
+      "Bash(1:*)",
+      "Bash(docker-compose restart:*)"
     ]
   }
 }

@@ -40,7 +40,7 @@ init: ## First-time setup: build, copy .env, install deps, seed
 	docker-compose exec -T app php artisan key:generate
 	@echo ">>> Running seeders..."
 	docker-compose exec -T app php artisan db:seed
-	@echo.
+	@cmd /c echo.
 	@echo Setup complete!
 	@echo    Backend:       http://localhost:8000
 	@echo    Frontend:      http://localhost:5173

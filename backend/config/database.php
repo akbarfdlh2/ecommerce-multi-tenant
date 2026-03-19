@@ -17,7 +17,7 @@ return [
             'username' => env('MONGODB_USERNAME', ''),
             'password' => env('MONGODB_PASSWORD', ''),
             'options'  => [
-                'authSource' => 'admin',
+                'authSource' => 'ecommerce_central',
             ],
         ],
 
@@ -34,7 +34,7 @@ return [
             'username' => env('MONGODB_USERNAME', ''),
             'password' => env('MONGODB_PASSWORD', ''),
             'options'  => [
-                'authSource' => 'admin',
+                'authSource' => 'ecommerce_central',
             ],
         ],
     ],

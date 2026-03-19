@@ -16,7 +16,11 @@
       "Bash(gh auth:*)",
       "Bash(cmd /c \"gh --version 2>&1 & gh auth status 2>&1\")",
       "Bash(docker-compose exec:*)",
-      "Bash(docker-compose ps:*)"
+      "Bash(docker-compose ps:*)",
+      "Bash(docker-compose logs:*)",
+      "Bash(docker-compose down:*)",
+      "Bash(docker volume:*)",
+      "Bash(docker-compose up:*)"
     ]
   }
 }

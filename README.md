@@ -1,5 +1,11 @@
 # AFDA Multi-Tenant eCommerce Platform
 
+![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20?style=flat&logo=laravel&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-3-4FC08D?style=flat&logo=vue.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-7.0-47A248?style=flat&logo=mongodb&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=flat&logo=docker&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?style=flat&logo=php&logoColor=white)
+
 Platform eCommerce multi-tenant menggunakan **Laravel 11**, **Vue.js 3**, dan **MongoDB**, dengan isolasi database penuh per tenant.
 
 ## Arsitektur
@@ -60,8 +66,8 @@ HTTP Request
 
 ```bash
 # Clone repo
-git clone <repo-url>
-cd PROJECT_3
+git clone https://github.com/akbarfdlh2/ecommerce-multi-tenant.git
+cd ecommerce-multi-tenant
 
 # First-time setup (build + seed)
 make init
@@ -80,6 +86,16 @@ docker-compose exec app php artisan db:seed
 | Frontend      | http://localhost:5173        |
 | Backend API   | http://localhost:8000/api    |
 | Mongo Express | http://localhost:8081        |
+
+### Jalankan dengan Docker Image dari GHCR
+
+Docker image tersedia di GitHub Container Registry:
+
+```bash
+# Pull image
+docker pull ghcr.io/akbarfdlh2/ecommerce-app:latest
+docker pull ghcr.io/akbarfdlh2/ecommerce-frontend:latest
+```
 
 ## API Endpoints
 

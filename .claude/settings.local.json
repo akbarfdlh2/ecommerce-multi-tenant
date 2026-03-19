@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(composer --version)",
+      "Bash(php --version)",
+      "Bash(npm --version)",
+      "Bash(php.exe --version)",
+      "Bash(composer.exe --version)",
+      "Bash(node.exe --version)",
+      "Bash(npm.exe --version)",
+      "Read(//c/Users/akbar/AppData/Local/Programs/PhpWebStudy-Data//**)",
+      "Bash(cmd /c \"where php\")",
+      "Bash(cmd /c \"where composer\")",
+      "Bash(cmd /c \"where php 2>&1 & where composer 2>&1\")",
+      "Bash(gh --version)",
+      "Bash(gh auth:*)",
+      "Bash(cmd /c \"gh --version 2>&1 & gh auth status 2>&1\")"
+    ]
+  }
+}

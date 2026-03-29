@@ -25,7 +25,6 @@ class Cart extends Model
     ];
 
     protected $casts = [
-        'items' => 'array',
         'total' => 'float',
     ];
 

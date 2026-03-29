@@ -26,16 +26,16 @@ Route::middleware(['tenant'])->group(function () {
     Route::post('/auth/register', [AuthController::class, 'register']);
     Route::post('/auth/login',    [AuthController::class, 'login']);
 
+    // ── Public product browsing (no auth required) ────────────────────────
+    Route::get('/products',        [ProductController::class, 'index']);
+    Route::get('/products/search', [ProductController::class, 'search']);
+    Route::get('/products/{id}',   [ProductController::class, 'show']);
+
     // ── Authenticated routes ───────────────────────────────────────────────
     Route::middleware(['auth:sanctum'])->group(function () {
 
         Route::post('/auth/logout', [AuthController::class, 'logout']);
         Route::get('/auth/me',     [AuthController::class, 'me']);
-
-        // ── Products (read for all authenticated) ──────────────────────────
-        Route::get('/products',        [ProductController::class, 'index']);
-        Route::get('/products/{id}',   [ProductController::class, 'show']);
-        Route::get('/products/search', [ProductController::class, 'search']);
 
         // ── Products (write for admin only) ────────────────────────────────
         Route::middleware(['role:admin'])->group(function () {

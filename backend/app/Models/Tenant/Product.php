@@ -39,12 +39,10 @@ class Product extends Model
     ];
 
     protected $casts = [
-        'price'      => 'float',
-        'stock'      => 'integer',
-        'weight'     => 'float',
-        'is_active'  => 'boolean',
-        'images'     => 'array',
-        'attributes' => 'array',
+        'price'     => 'float',
+        'stock'     => 'integer',
+        'weight'    => 'float',
+        'is_active' => 'boolean',
     ];
 
     protected $attributes = [

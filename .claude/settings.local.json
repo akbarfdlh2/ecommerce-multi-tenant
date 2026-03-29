@@ -22,7 +22,17 @@
       "Bash(docker volume:*)",
       "Bash(docker-compose up:*)",
       "Bash(1:*)",
-      "Bash(docker-compose restart:*)"
+      "Bash(docker-compose restart:*)",
+      "Bash(rtk docker:*)",
+      "Bash(docker info:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker exec:*)",
+      "Bash(grep -v \"^Current\\\\|^Using\\\\|^MongoS\\\\|DeprecationWarning\\\\|^$\")",
+      "Bash(grep -v \"^$\\\\|Warning\\\\|Module\")",
+      "Bash(docker exec ecommerce_app bash -c ':*)"
+    ],
+    "additionalDirectories": [
+      "c:\\Office\\PT_AFDA_TECHNOLOGY_SOLUTIONS\\ecommerce-multi-tenant\\docker\\php"
     ]
   }
 }

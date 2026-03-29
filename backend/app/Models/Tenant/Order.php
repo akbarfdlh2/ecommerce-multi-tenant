@@ -51,11 +51,9 @@ class Order extends Model
     ];
 
     protected $casts = [
-        'items'            => 'array',
-        'shipping_address' => 'array',
-        'subtotal'         => 'float',
-        'shipping_cost'    => 'float',
-        'total'            => 'float',
+        'subtotal'     => 'float',
+        'shipping_cost' => 'float',
+        'total'        => 'float',
     ];
 
     protected $attributes = [
